@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="https://kit.fontawesome.com/db137f0834.js" crossorigin="anonymous"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container padding-extra-large uk-padding-remove-vertical" uk-scrollspy-nav="closest: li; scroll: true" uk-navbar>
+            <a class="uk-navbar-item uk-logo" href="#">Home Fitness</a>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#Foto">Home</a></li>
+                    <li><a href="#Bio">Bio</a></li>
+                    <li><a href="#DieteSchede">Diete/Schede</a></li>
+                    <li><a href="#Contatti">Contatti</a></li>
+                    <li>
+                        <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="youtube"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="facebook"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="all-container">
+
+        <!-- foto -->
+        <div class="uk-section uk-padding-remove-vertical">
+            <div class="uk-cover-container">
+                <canvas width="" height="600"></canvas>
+                <img id="Foto" src="foto_1.jpg" alt="" uk-cover>
+            </div>
+
+            <!-- <img id="Foto" data-src="foto_1.jpg" width="1800" height="1200" alt="" uk-img> -->
+        </div>
+
+        <!-- Bio -->
+        <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background:#151515">
+            <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.3;" style="color:#FFC107">BIOGRAFIA
+                </h1>
+                <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.3;" id="Bio">Prima di diventare un personal trainer, ho dedicato la mia vita ad una profonda formazione, studiando e laureandomi con successo in molteplici settori che mi hanno portato a questa professione come: Scienze Motorie, Osteopatia, Massoterapia
+                    e Tecniche di Radiologia Medica. Adatto qualsiasi esigenza al vostro obiettivo. Anni di studio mi hanno portato alla ricerca della massima professionalità, anni di esperienza a capire le persone e sviluppare un piano di allenamento
+                    efficace e stimolante. Allenamenti funzionali richiedono sacrifici ma vi appagheranno sui vostri risultati che vedrete e sentirete, raggiungerete il vostro obiettivo e sbloccherete il massimo potenziale, nel fisico, nella mente e nella
+                    Vita.
+                </p>
+                <div uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.1;" class="uk-divider-small bio-divider">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div style="background:#151515" class="uk-section padding-extra-large">
+            <h1 style="color:#FFC107" class="uk-text-center">BIOGRAFIA</h1>
+            <p class="uk-text-center" id="Bio">Prima di diventare un personal trainer, ho dedicato la mia vita ad una
+                profonda formazione, studiando e laureandomi con successo in molteplici settori che mi hanno portato a
+                questa professione come: Scienze Motorie, Osteopatia, Massoterapia
+                e Tecniche di Radiologia Medica. Adatto qualsiasi esigenza al vostro obiettivo. Anni di studio mi hanno
+                portato alla ricerca della massima professionalità, anni di esperienza a capire le persone e sviluppare
+                un piano di allenamento efficace
+                e stimolante. Allenamenti funzionali richiedono sacrifici ma vi appagheranno sui vostri risultati che
+                vedrete e sentirete, raggiungerete il vostro obiettivo e sbloccherete il massimo potenziale, nel fisico,
+                nella mente e nella Vita.
+            </p> -->
+
+        <!-- <div class="uk-divider-small bio-divider">
+        </div> -->
+    </div>
+
+
+
+
+
+    <div class="uk-container page-container">
+
+        <!-- fotogallery -->
+        <div class="uk-section">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull">
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                    </li>
+                </ul>
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            </div>
+        </div>
+
+        <!-- cv -->
+        <div class="uk-section">
+            <div uk-slider="center: true" class="uk-margin-large-top">
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid ">
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="foto_1.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="foto_1.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="foto_1.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="foto_1.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="foto_1.jpg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                </div>
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+        </div>
+
+        <!-- diete schede -->
+        <div id="DieteSchede">
+
+            <div class="uk-section">
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                        <canvas width="600" height="400"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">FITNESS BASE</h3>
+                            <p>Un programma di allenamento preparato specificatamente per TE basato sulle esigenze del tuo corpo e da praticare dove vuoi e quando vuoi. Un programma che ti farà raggiungere i tuoi obiettivi. Tutti i programmi preparati e
+                                strutturati dall’esperienza di Giacomo Dalprà.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-section">
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                        <canvas width="600" height="400"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">PIANO NUTRIZIONALE</h3>
+                            <p>Un piano nutrizionale personalizzato, basato sulle tue necessità giornaliere e del tuo corpo. Raggiungi il tuo obiettivo attraverso un piano nutrizionale semplice e ai cibi che più ti piacciono. Tutti i piani sono preparati
+                                e basati sull’esperienza di ………
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-section">
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                        <canvas width="600" height="400"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">MENTAL COACH</h3>
+                            <p>Allena, rinforza e doma la tua mente. Impara a gestire le tue emozioni e sfruttarle in ogni ambito della tua vita per affrontare ogni tipo di situazione e allenamento con l’attitudine giusta. Sblocca il tuo potenziale grazie
+                                ai programmi del mental coaching. Le sedute e i programmi sono preparati e basati sull’esperienza di Celeste Barboglio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-section">
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                        <canvas width="600" height="400"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSTEOPATIA - MASSOFISIOTERAPIA</h3>
+                            <p>Hai bisogno di qualcuno di competente che ti rimetta in sesto? Ci pensa il nostro osteopata! Grazie ai suoi anni di esperienza nel campo e ai suoi studi, sarà in grado di risolvere i tuoi acciacchi fisici o semplicemente metterti
+                                a posto i muscoli dopo una sessione intensa di allenamento. Tutte le sedute verranno effettuate da Giacomo Dalprà.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-section">
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                        <img src="foto_1.jpg" alt="" uk-cover>
+                        <canvas width="600" height="400"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">PACCHETTO PREMIUM</h3>
+                            <p>Avrai a tua disposizione, un mix dei nostri pacchetti (Fitness, Nutrizionale, Mental). Il raggiungimento del tuo obiettivo sarà più efficiente e veloce grazie alla completezza di questo piano combinato. Avrai a disposizione
+                                allenamento combinato ad un piano nutrizionale personalizzato e un supporto mentale che aiuterà la tua mente e il tuo corpo a sbloccarsi e a superare i tuoi limiti e obiettivi. I Piani saranno gestiti da Giacomo Dalprà,
+                                ……., Celeste Barboglio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div uk-slider>
+
+            <div class="uk-position-relative">
+
+                <div class="uk-slider-container uk-light">
+                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-3@m" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
+
+                        <!-- <div uk-slider="center: true">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"  >
+
+                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true"> -->
+                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
+                            <div class="uk-card uk-card-default card-package">
+                                <div class="uk-card-media-top icon-package uk-padding-large-top">
+                                    <img src="Icon/Fitness.svg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">FITNESS BASE</h3>
+                                    <p>Un programma di allenamento preparato specificatamente per TE basato sulle esigenze del tuo corpo e da praticare dove vuoi e quando vuoi. Un programma che ti farà raggiungere i tuoi obiettivi. Tutti i programmi preparati
+                                        e strutturati dall’esperienza di Giacomo Dalprà.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
+                            <div class="uk-card uk-card-default card-package">
+                                <div class="uk-card-media-top icon-package uk-padding-large-top">
+                                    <img src="Icon/Diet.svg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">PIANO NUTRIZIONALE</h3>
+                                    <p>Un piano nutrizionale personalizzato, basato sulle tue necessità giornaliere e del tuo corpo. Raggiungi il tuo obiettivo attraverso un piano nutrizionale semplice e ai cibi che più ti piacciono. Tutti i piani sono preparati
+                                        e basati sull’esperienza di ………
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
+                            <div class="uk-card uk-card-default card-package">
+                                <div class="uk-card-media-top icon-package uk-padding-large-top">
+                                    <img src="Icon/Brain.svg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">MENTAL COACH</h3>
+                                    <p>Allena, rinforza e doma la tua mente. Impara a gestire le tue emozioni e sfruttarle in ogni ambito della tua vita per affrontare ogni tipo di situazione e allenamento con l’attitudine giusta. Sblocca il tuo potenziale
+                                        grazie ai programmi del mental coaching. Le sedute e i programmi sono preparati e basati sull’esperienza di Celeste Barboglio.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
+                            <div class="uk-card uk-card-default card-package">
+                                <div class="uk-card-media-top icon-package uk-padding-large-top">
+                                    <img src="Icon/Back.svg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">OSTEOPATIA - MASSOFISIOTERAPIA</h3>
+                                    <p>Hai bisogno di qualcuno di competente che ti rimetta in sesto? Ci pensa il nostro osteopata! Grazie ai suoi anni di esperienza nel campo e ai suoi studi, sarà in grado di risolvere i tuoi acciacchi fisici o semplicemente
+                                        metterti a posto i muscoli dopo una sessione intensa di allenamento. Tutte le sedute verranno effettuate da Giacomo Dalprà.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
+                            <div class="uk-card uk-card-default card-package">
+                                <div class="uk-card-media-top icon-package uk-padding-large-top">
+                                    <img src="Icon/Premium.svg" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">PACCHETTO PREMIUM</h3>
+                                    <p>Avrai a tua disposizione, un mix dei nostri pacchetti (Fitness, Nutrizionale, Mental). Il raggiungimento del tuo obiettivo sarà più efficiente e veloce grazie alla completezza di questo piano combinato. Avrai a disposizione
+                                        allenamento combinato ad un piano nutrizionale personalizzato e un supporto mentale che aiuterà la tua mente e il tuo corpo a sbloccarsi e a superare i tuoi limiti e obiettivi. I Piani saranno gestiti da Giacomo
+                                        Dalprà, ……., Celeste Barboglio.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                    <div class="uk-hidden@s uk-light">
+                        <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    </div>
+
+                    <div class="uk-visible@s">
+                        <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    </div>
+
+                </div>
+
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+            </div>
+
+        </div>
+
+        <!-- contatti -->
+        <footer id="Contatti" class="uk-margin-top" uk-sticky>
+            <div class="uk-container uk-padding-small">
+                <p class="uk-text-small">copyright(c).</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
