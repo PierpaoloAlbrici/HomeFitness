@@ -2,29 +2,100 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161897806-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-161897806-1');
+    </script>
+    -->
+    <!-- Google Tag Manager -->
+    <!--
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJGXCKW');</script>
+    -->
+    <!-- End Google Tag Manager -->
+    <title>HomeFitness - La palestra a casa tua</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home Fit ti offre la possibilità di acquistare schede di allenamento personalizzate a distanza!
+        Consulta i migliori esperti!">
+    <link rel="icon" type="image/ico" href="src/img/logo/HF_LOGO.svg" />
     <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/site.css" />
-    <script src="https://kit.fontawesome.com/db137f0834.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="src/data-model.js"></script>
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        function setModalJSONP(id) {
+            setModal(id, products);
+        }
+    </script>
+
+    <script type="text/javascript">
+            var _iub = _iub || [];
+            _iub.csConfiguration = {
+                "enableCcpa":true,
+                "countryDetection":true,
+                "consentOnScroll":false,
+                "consentOnLinkAndButton":false,
+                "ccpaNoticeDisplay":false,
+                "ccpaAcknowledgeOnDisplay":true,
+                "lang":"it",
+                "siteId":1836707,
+                "cookiePolicyId":62672518,
+                "banner":  {
+                    "acceptButtonDisplay":true,
+                    "customizeButtonDisplay":true,
+                    "acceptButtonColor":"#ffc107",
+                    "acceptButtonCaptionColor":"#000000",
+                    "customizeButtonColor":"#212121",
+                    "customizeButtonCaptionColor":"white",
+                    "position":"float-center",
+                    "textColor":"white",
+                    "backgroundColor":"#151515",
+                    "backgroundOverlay":true
+                    }
+                };
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
 </head>
 
 <body>
-
+    <!-- Google Tag Manager (noscript) -->
+    <!--
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJGXCKW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    -->
+    <!-- End Google Tag Manager (noscript) -->
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-        <nav class="uk-navbar-container padding-extra-large uk-padding-remove-vertical" uk-scrollspy-nav="closest: li; scroll: true" uk-navbar>
-            <a class="uk-navbar-item uk-logo" href="#">Home Fitness</a>
-            <div class="uk-navbar-right">
+        <nav class="uk-navbar-container padding-extra-large uk-padding-remove-vertical" uk-scrollspy-nav="closest: li; scroll: true; offset:100;" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" href="index.html"><img class="uk-preserve-width uk-margin-small-top uk-margin-small-bottom" src="src/img/logo/HF_LOGO.svg" alt="" width="80"></a>
+            </div>
+
+            <div class="uk-navbar-right uk-visible@s">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="#Foto">Home</a></li>
-                    <li><a href="#Bio">Bio</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <!--<li><a href="#fotogallery">Foto</a></li>-->
+                    <li><a href="#cv">Chi siamo</a></li>
                     <li><a href="#DieteSchede">Diete/Schede</a></li>
                     <li><a href="#Contatti">Contatti</a></li>
                     <li>
-                        <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="instagram"></a>
+                        <a href="https://www.instagram.com/homefitness_20/" class="uk-icon-link uk-margin-small-right" uk-icon="instagram"></a>
                     </li>
                     <li>
                         <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="youtube"></a>
@@ -34,351 +105,453 @@
                     </li>
                 </ul>
             </div>
+            <!--Navbar for screen < 640px-->
+            <div class="uk-navbar-right uk-hidden@s">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #nav-small-off-canvas">
+                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
         </nav>
+
+        <div id="nav-small-off-canvas" uk-offcanvas="overlay: true; flip: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column" uk-scrollspy-nav="closest: li; scroll: true; offset: 100">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li class="uk-active"><a href="#Foto">Home</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <!--<li><a href="#fotogallery">Foto</a></li>-->
+                    <li><a href="#cv">Chi siamo</a></li>
+                    <li><a href="#DieteSchede">Diete/Schede</a></li>
+                    <li><a href="#Contatti">Contatti</a></li>
+                    <hr class="uk-divider-small">
+                    <li>
+                        <a href="https://www.instagram.com/homefitness_20/" class="uk-icon-link uk-margin-small-right" uk-icon="instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="youtube"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="facebook"></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="all-container">
 
         <!-- foto -->
-        <div class="uk-section uk-padding-remove-vertical">
-            <div class="uk-cover-container">
-                <canvas width="" height="600"></canvas>
-                <img id="Foto" src="foto_1.jpg" alt="" uk-cover>
-            </div>
 
-            <!-- <img id="Foto" data-src="foto_1.jpg" width="1800" height="1200" alt="" uk-img> -->
+        <div class="uk-cover-container" uk-height-viewport="offset-top: true;">
+            <!--canvas width="" height="500"></canvas-->
+            <img id="Foto" src="src/img/foto_1.jpg" alt="" uk-cover>
+            <div class="uk-position-center uk-text-center">
+                <h1 id="cover-title" class="uk-heading-xlarge">HOME FITNESS</h1>
+                <h2 class="uk-margin-remove-top">La palestra a casa tua.</h2>
+                <div><a href="#DieteSchede" class="uk-button uk-button-primary button-call-to-action">Guarda i prodotti</a></div>
+            </div>
+            <div uk-scrollspy-nav="scroll: true; offset: 130">
+                <a href="#mission"><span class="uk-position-bottom-center uk-margin-medium-bottom" uk-icon="icon: chevron-down; ratio: 2" style="color: #FFC107;"></span></a>
+            </div>
         </div>
 
         <!-- Bio -->
-        <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background:#151515">
+        <div id="mission" class="uk-section" style="background:#151515">
             <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.3;" style="color:#FFC107">BIOGRAFIA
-                </h1>
-                <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.3;" id="Bio">Prima di diventare un personal trainer, ho dedicato la mia vita ad una profonda formazione, studiando e laureandomi con successo in molteplici settori che mi hanno portato a questa professione come: Scienze Motorie, Osteopatia, Massoterapia
-                    e Tecniche di Radiologia Medica. Adatto qualsiasi esigenza al vostro obiettivo. Anni di studio mi hanno portato alla ricerca della massima professionalità, anni di esperienza a capire le persone e sviluppare un piano di allenamento
-                    efficace e stimolante. Allenamenti funzionali richiedono sacrifici ma vi appagheranno sui vostri risultati che vedrete e sentirete, raggiungerete il vostro obiettivo e sbloccherete il massimo potenziale, nel fisico, nella mente e nella
-                    Vita.
+                <h1 style="color:#FFC107">LA NOSTRA MISSIONE</h1>
+                <p style="font-size: 125%;">Prenderci cura di te. Grazie a un team di esperti, siamo in grado di fornirti una linea prodotti completa per il tuo benessere fisico e mentale. Il nostro valore sta nel conoscere a fondo le tue esigenze e le tue abitudini per adattare
+                    il nostro servizio su misura per te.
                 </p>
-                <div uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.1;" class="uk-divider-small bio-divider">
+                <div class="uk-divider-small bio-divider">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="uk-container page-container">
+            <!-- cv -->
+            <div class="uk-section" id="cv">
+                <div class="uk-section">
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="src/img/Foto_Giacomo.jpg" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body">
+
+                                <!--New -->
+                                <div uk-grid>
+                                    <div class="uk-width-auto@m uk-flex-first">
+                                        <ul class="uk-tab-left" uk-tab="connect: #cv1-tab-left; animation: uk-animation-fade">
+                                            <li><a href="#">CV</a></li>
+                                            <li><a href="#">BIO</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                        <h2 class="uk-card-title">GIACOMO DALPRÀ</h2>
+
+                                        <ul id="cv1-tab-left" class="uk-switcher">
+                                            <li>
+                                                Laurea in scienze motorie
+                                                <BR> Laurea in tecniche di radiologia medica
+                                                <BR> Corso di biomeccanica applicata alla riatletizzazione
+                                                <BR> Corso di tecniche dissettorie su cadavere
+                                                <BR> Diploma di massofisioterapia
+                                                <BR> Diploma di osteopatia
+                                                <BR> Preparatore atletico personale ATP
+                                                <BR> Massaggiatore/osteopata rignanese calcio serie D
+                                                <BR> Preparatore atletico ASICS Firenze marathon
+                                                <BR> Osteopata/massaggiatore tennis paraolímpico 
+                                                <BR>
+                                            </li>
+                                            <li>
+                                                Prima di diventare un personal trainer, ho dedicato la mia vita ad una profonda formazione, studiando e laureandomi con successo in molteplici settori che mi hanno portato a questa professione come: Scienze Motorie, Osteopatia, Massoterapia e Tecniche
+                                                di Radiologia Medica. Adatto qualsiasi esigenza al vostro obiettivo. Anni di studio mi hanno portato alla ricerca della massima professionalità, anni di esperienza a capire le persone e sviluppare un piano
+                                                di allenamento efficace e stimolante. Allenamenti funzionali richiedono sacrifici ma vi appagheranno sui vostri risultati che vedrete e sentirete, raggiungerete il vostro obiettivo e sbloccherete il massimo
+                                                potenziale, nel fisico, nella mente e nella Vita.
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-section">
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div class="uk-card-media-left uk-cover-container">
+                            <img src="src/img/foto_cv_barboglio.jpg" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body">
+                                <div uk-grid>
+                                    <div class="uk-width-auto@m uk-flex-last@m">
+                                        <ul class="uk-tab-right" uk-tab="connect: #cv2-tab-right; animation: uk-animation-fade">
+                                            <li><a href="#">CV</a></li>
+                                            <li><a href="#">BIO</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                        <h2 class="uk-card-title" align="right">CELESTE BARBOGLIO</h2>
+                                        <ul id="cv2-tab-right" class="uk-switcher">
+
+                                            <li align="right">
+                                                Laurea in Scienze delle Attività Motorie e Sportive
+                                                <BR>Laurea in Scienze e Tecniche Psicologiche
+                                                <BR>Laurea in Psicologia
+                                                <BR>Master integrato in Psicologia dello Sport e Tecniche di Preparazione Mentale
+                                                <BR>Istruttrice 1° F.I.T.
+                                                <BR>Preparatrice atletica 1° F.I.T.
+                                                <BR>Istruttrice regionale di tennis Uisp
+                                                <BR>ISMCA mental coach secondo livello
+                                                <BR>ISMCA physical coach primo livello
+                                            </li>
+                                            <li align="right">
+                                                Anni di professionismo nello sport come tennista classificata 2.6, mi hanno portato a chiedermi come ottenere risultati migliori e come spingere le mie prestazioni sempre più in alto. Mi sono laureata in Scienze Motorie inizialmente e in seguito in Psicologia,
+                                                terminando il mio percorso con un master in psicologia dello sport. La mia filosofia è quella di preparare mentalmente la persona in maniera molto pratica rivolgendo il focus sulla prestazione sportiva.
+                                                Ti aiuterò ad aumentare la tua motivazione, a definire e gestire obiettivi, a preparare e gestire la gara, a ottenere uno stato di attivazione ottimale attraverso la visualizzazione ed il rilassamento, a
+                                                gestire lo stress e l’ansia, e come recuperare prontamente dagli infortuni. Ogni percorso sarà costruito e personalizzato in base alle tue esigenze psicofisiche-temporali. Raggiungerai il Benessere e Otterrai
+                                                risultati in ogni campo, ottimizzando la tua vita ad ogni livello.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-section">
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="src/img/foto_nutrizionista.jpg" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body">
+
+                                <!--New -->
+                                <div uk-grid>
+                                    <div class="uk-width-auto@m uk-flex-first">
+                                        <ul class="uk-tab-left" uk-tab="connect: #cv1-tab-left; animation: uk-animation-fade">
+                                            <li><a href="#">CV</a></li>
+                                            <li><a href="#">BIO</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                        <h2 class="uk-card-title">MARY YVONNE DONA</h2>
+
+                                        <ul id="cv1-tab-left" class="uk-switcher">
+                                            <li>
+                                              Laurea in scienze motorie e sport
+                                              <BR> Master in nutrizione e dietetica applicata allo sport
+                                              <BR> Ex Insegnante di tennis e preparatore atletico presso quanta sport Village
+                                              <BR> Insegnante di tennis ASD Top spin
+                                              <BR> Coach level C GPTCA
+                                              <BR> Specialista in esercizio correttivo presso ATS
+                                              <BR> Istruttore di secondo grado Fit
+                                              <BR> Preparatore Fisico di I grado Fit
+                                              <BR> Insegnante tennis e preparatore atletico veneri team
+                                              <BR>
+                                            </li>
+                                            <li>
+                                              Ex giocatrice di tennis a livello agonistico, ho conseguito gli studi laureandomi in Scienze Motorie e nel frattempo incominciavo a lavorare come insegnante di tennis e preparatore atletico. Tuttavia però ho continuato gli studi completando con un Master in Nutrizione e dietetica applicata allo sport perché ritengo che nello sportivo, sia amatoriale che professionista, la corretta alimentazione è fondamentale per raggiungere i risultati prefissati. Svolgendo dunque il mio ruolo anche come consulente nutrizionista in particolare modo ai miei atleti del tennis. La corretta alimentazione ed integrazione consente di migliorare la tua prestazione, sia in allenamento che in gara o in partita o semplicemente per mantenersi in forma o per ottenere la forma desiderata. Una buona alimentazione permette di ottimizzare gli allenamenti.
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="card-container">
+            <!-- diete schede -->
+            <div id="DieteSchede">
+                <div uk-slider>
+                    <div class="uk-position-relative">
+
+                        <div class="uk-slider-container slider-container">
+                            <ul class="uk-slider-items uk-width-1-1\@s uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l m-auto" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 150; repeat: true">
+                                <li class="card-item m-auto" id="card-prod-fit-bas">
+                                    <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-card uk-card-default card-package m-auto">
+                                        <div class="uk-card-media-top icon-package uk-padding-large-top card-header">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="uk-card-body card-body">
+                                            <h3 class="uk-card-title card-title"></h3>
+                                            <ul class="uk-list uk-list-divider">
+
+                                            </ul>
+                                        </div>
+
+                                        <div class="uk-card-footer card-footer ">
+                                            <div class="price m-auto">
+
+                                                <span class="amount"></span>
+
+                                            </div>
+                                            <span class="m-auto"><button onclick="setModalJSONP('card-prod-fit-bas')"
+                                                    class="uk-button uk-button-primary button-pay m-auto">Scopri</button></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-item m-auto" id="card-prod-pian-nutr">
+                                    <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-card uk-card-default card-package m-auto">
+                                        <div class="uk-card-media-top icon-package uk-padding-large-top card-header">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="uk-card-body card-body">
+                                            <h3 class="uk-card-title card-title"></h3>
+                                            <ul class="uk-list uk-list-divider">
+
+                                            </ul>
+                                        </div>
+                                        <div class="uk-card-footer card-footer ">
+                                            <div class="price m-auto">
+
+                                                <span class="amount"></span>
+
+                                            </div>
+                                            <span class="m-auto"><button onclick="setModalJSONP('card-prod-pian-nutr')"
+                                                    class="uk-button uk-button-primary button-pay m-auto">Scopri</button></span>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="card-item m-auto" id="card-prod-ment-coa">
+                                    <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-card uk-card-default card-package m-auto">
+                                        <div class="uk-card-media-top icon-package uk-padding-large-top card-header">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="uk-card-body card-body">
+                                            <h3 class="uk-card-title card-title"></h3>
+                                            <ul class="uk-list uk-list-divider">
+
+                                            </ul>
+                                        </div>
+                                        <div class="uk-card-footer card-footer ">
+                                            <div class="price m-auto">
+
+                                                <span class="amount"></span>
+
+                                            </div>
+                                            <span class="m-auto"><button onclick="setModalJSONP('card-prod-ment-coa')"
+                                                    class="uk-button uk-button-primary button-pay m-auto">Scopri</button></span>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="card-item m-auto" id="card-prod-ost-mass">
+                                    <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-card uk-card-default card-package m-auto">
+                                        <div class="uk-card-media-top icon-package uk-padding-large-top card-header">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="uk-card-body card-body">
+                                            <h3 class="uk-card-title card-title"></h3>
+                                            <ul class="uk-list uk-list-divider">
+
+                                            </ul>
+                                        </div>
+                                        <div class="uk-card-footer card-footer ">
+                                            <div class="price m-auto">
+
+                                                <span class="amount"></span>
+
+                                            </div>
+                                            <span class="m-auto"><button onclick="setModalJSONP('card-prod-ost-mass')"
+                                                    class="uk-button uk-button-primary button-pay m-auto">Scopri</button></span>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="card-item m-auto" id="card-prod-premium">
+                                    <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-card uk-card-default card-package m-auto">
+                                        <div class="uk-card-media-top icon-package uk-padding-large-top card-header">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="uk-card-body card-body">
+                                            <h3 class="uk-card-title card-title"></h3>
+                                            <ul class="uk-list uk-list-divider">
+
+                                            </ul>
+                                        </div>
+                                        <div class="uk-card-footer card-footer ">
+
+                                            <div class="price m-auto">
+
+                                                <span class="amount"></span>
+
+                                            </div>
+                                            <span class="m-auto"><button onclick="setModalJSONP('card-prod-premium')"
+                                                    class="uk-button uk-button-primary button-pay m-auto">Scopri</button></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="uk-hidden@s uk-light">
+                                <a class="uk-position-center-left uk-position-small arrow-black arrow-left" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a class="uk-position-center-right uk-position-small arrow-black arrow-right" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            </div>
+
+                            <div class="uk-visible@s">
+                                <a class="uk-position-center-left-out uk-position-small arrow-black arrow-left" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a class="uk-position-center-right-out uk-position-small arrow-black arrow-right" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            </div>
+                        </div>
+                        <span class="uk-light">
+                            <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- <div style="background:#151515" class="uk-section padding-extra-large">
-            <h1 style="color:#FFC107" class="uk-text-center">BIOGRAFIA</h1>
-            <p class="uk-text-center" id="Bio">Prima di diventare un personal trainer, ho dedicato la mia vita ad una
-                profonda formazione, studiando e laureandomi con successo in molteplici settori che mi hanno portato a
-                questa professione come: Scienze Motorie, Osteopatia, Massoterapia
-                e Tecniche di Radiologia Medica. Adatto qualsiasi esigenza al vostro obiettivo. Anni di studio mi hanno
-                portato alla ricerca della massima professionalità, anni di esperienza a capire le persone e sviluppare
-                un piano di allenamento efficace
-                e stimolante. Allenamenti funzionali richiedono sacrifici ma vi appagheranno sui vostri risultati che
-                vedrete e sentirete, raggiungerete il vostro obiettivo e sbloccherete il massimo potenziale, nel fisico,
-                nella mente e nella Vita.
-            </p> -->
-
-        <!-- <div class="uk-divider-small bio-divider">
-        </div> -->
-    </div>
-
-
-
-
-
-    <div class="uk-container page-container">
-
-        <!-- fotogallery -->
-        <div class="uk-section">
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull">
-                <ul class="uk-slideshow-items">
-                    <li>
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                    </li>
-                    <li>
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                    </li>
-                    <li>
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                    </li>
-                </ul>
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-            </div>
-        </div>
-
-        <!-- cv -->
-        <div class="uk-section">
-            <div uk-slider="center: true" class="uk-margin-large-top">
-
-                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-
-                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid ">
+            <!--Modal per acquisti-->
+            <div id="modal-shop" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body">
+                    <h2 class="uk-modal-title" id="modal-shop-title"></h2>
+                    <h1 id="modal-shop-price"></h1>
+                    <ul uk-accordion>
                         <li>
-                            <div class="uk-card uk-card-default">
-                                <div class="uk-card-media-top">
-                                    <img src="foto_1.jpg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Headline</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default">
-                                <div class="uk-card-media-top">
-                                    <img src="foto_1.jpg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Headline</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default">
-                                <div class="uk-card-media-top">
-                                    <img src="foto_1.jpg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Headline</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default">
-                                <div class="uk-card-media-top">
-                                    <img src="foto_1.jpg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Headline</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default">
-                                <div class="uk-card-media-top">
-                                    <img src="foto_1.jpg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Headline</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
+                            <a class="uk-accordion-title" href="#">Descrizione del prodotto</a>
+                            <div class="uk-accordion-content">
+                                <p id="modal-shop-description">Segui il bottone qua sotto per effettuare il pagamento tramite PayPal. Semplice, sicuro e veloce.</p>
                             </div>
                         </li>
                     </ul>
-                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-                </div>
-                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-            </div>
-        </div>
-
-        <!-- diete schede -->
-        <div id="DieteSchede">
-
-            <div class="uk-section">
-                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">FITNESS BASE</h3>
-                            <p>Un programma di allenamento preparato specificatamente per TE basato sulle esigenze del tuo corpo e da praticare dove vuoi e quando vuoi. Un programma che ti farà raggiungere i tuoi obiettivi. Tutti i programmi preparati e
-                                strutturati dall’esperienza di Giacomo Dalprà.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-section">
-                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">PIANO NUTRIZIONALE</h3>
-                            <p>Un piano nutrizionale personalizzato, basato sulle tue necessità giornaliere e del tuo corpo. Raggiungi il tuo obiettivo attraverso un piano nutrizionale semplice e ai cibi che più ti piacciono. Tutti i piani sono preparati
-                                e basati sull’esperienza di ………
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-section">
-                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">MENTAL COACH</h3>
-                            <p>Allena, rinforza e doma la tua mente. Impara a gestire le tue emozioni e sfruttarle in ogni ambito della tua vita per affrontare ogni tipo di situazione e allenamento con l’attitudine giusta. Sblocca il tuo potenziale grazie
-                                ai programmi del mental coaching. Le sedute e i programmi sono preparati e basati sull’esperienza di Celeste Barboglio.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-section">
-                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">OSTEOPATIA - MASSOFISIOTERAPIA</h3>
-                            <p>Hai bisogno di qualcuno di competente che ti rimetta in sesto? Ci pensa il nostro osteopata! Grazie ai suoi anni di esperienza nel campo e ai suoi studi, sarà in grado di risolvere i tuoi acciacchi fisici o semplicemente metterti
-                                a posto i muscoli dopo una sessione intensa di allenamento. Tutte le sedute verranno effettuate da Giacomo Dalprà.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-section">
-                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="foto_1.jpg" alt="" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">PACCHETTO PREMIUM</h3>
-                            <p>Avrai a tua disposizione, un mix dei nostri pacchetti (Fitness, Nutrizionale, Mental). Il raggiungimento del tuo obiettivo sarà più efficiente e veloce grazie alla completezza di questo piano combinato. Avrai a disposizione
-                                allenamento combinato ad un piano nutrizionale personalizzato e un supporto mentale che aiuterà la tua mente e il tuo corpo a sbloccarsi e a superare i tuoi limiti e obiettivi. I Piani saranno gestiti da Giacomo Dalprà,
-                                ……., Celeste Barboglio.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div uk-slider>
-
-            <div class="uk-position-relative">
-
-                <div class="uk-slider-container uk-light">
-                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-3@m" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
-
-                        <!-- <div uk-slider="center: true">
-
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"  >
-
-                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true"> -->
-                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
-                            <div class="uk-card uk-card-default card-package">
-                                <div class="uk-card-media-top icon-package uk-padding-large-top">
-                                    <img src="Icon/Fitness.svg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">FITNESS BASE</h3>
-                                    <p>Un programma di allenamento preparato specificatamente per TE basato sulle esigenze del tuo corpo e da praticare dove vuoi e quando vuoi. Un programma che ti farà raggiungere i tuoi obiettivi. Tutti i programmi preparati
-                                        e strutturati dall’esperienza di Giacomo Dalprà.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
-                            <div class="uk-card uk-card-default card-package">
-                                <div class="uk-card-media-top icon-package uk-padding-large-top">
-                                    <img src="Icon/Diet.svg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">PIANO NUTRIZIONALE</h3>
-                                    <p>Un piano nutrizionale personalizzato, basato sulle tue necessità giornaliere e del tuo corpo. Raggiungi il tuo obiettivo attraverso un piano nutrizionale semplice e ai cibi che più ti piacciono. Tutti i piani sono preparati
-                                        e basati sull’esperienza di ………
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
-                            <div class="uk-card uk-card-default card-package">
-                                <div class="uk-card-media-top icon-package uk-padding-large-top">
-                                    <img src="Icon/Brain.svg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">MENTAL COACH</h3>
-                                    <p>Allena, rinforza e doma la tua mente. Impara a gestire le tue emozioni e sfruttarle in ogni ambito della tua vita per affrontare ogni tipo di situazione e allenamento con l’attitudine giusta. Sblocca il tuo potenziale
-                                        grazie ai programmi del mental coaching. Le sedute e i programmi sono preparati e basati sull’esperienza di Celeste Barboglio.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
-                            <div class="uk-card uk-card-default card-package">
-                                <div class="uk-card-media-top icon-package uk-padding-large-top">
-                                    <img src="Icon/Back.svg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">OSTEOPATIA - MASSOFISIOTERAPIA</h3>
-                                    <p>Hai bisogno di qualcuno di competente che ti rimetta in sesto? Ci pensa il nostro osteopata! Grazie ai suoi anni di esperienza nel campo e ai suoi studi, sarà in grado di risolvere i tuoi acciacchi fisici o semplicemente
-                                        metterti a posto i muscoli dopo una sessione intensa di allenamento. Tutte le sedute verranno effettuate da Giacomo Dalprà.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding grow">
-                            <div class="uk-card uk-card-default card-package">
-                                <div class="uk-card-media-top icon-package uk-padding-large-top">
-                                    <img src="Icon/Premium.svg" alt="">
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">PACCHETTO PREMIUM</h3>
-                                    <p>Avrai a tua disposizione, un mix dei nostri pacchetti (Fitness, Nutrizionale, Mental). Il raggiungimento del tuo obiettivo sarà più efficiente e veloce grazie alla completezza di questo piano combinato. Avrai a disposizione
-                                        allenamento combinato ad un piano nutrizionale personalizzato e un supporto mentale che aiuterà la tua mente e il tuo corpo a sbloccarsi e a superare i tuoi limiti e obiettivi. I Piani saranno gestiti da Giacomo
-                                        Dalprà, ……., Celeste Barboglio.
-                                    </p>
-                                </div>
+                    <hr class="uk-divider-icon">
+                    <ul uk-accordion>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Come funziona?</a>
+                            <div class="uk-accordion-content">
+                                <p>Scegli il pacchetto più adatto alle tue esigenze e scrivici all'indirizzo
+                                    <a class="modal-mail-color" href="mailto:homefitness@outlook.it">
+                                    </span>homefitness@outlook.it</a>, ti ricontatteremo entro 24 ore per fornirti tutte le informazioni necessarie. A presto!
+                                </p>
                             </div>
                         </li>
                     </ul>
-
-
-
-                    <div class="uk-hidden@s uk-light">
-                        <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                        <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
-                    </div>
-
-                    <div class="uk-visible@s">
-                        <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                        <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    <div class="uk-align-center">
+                        <button class="uk-button uk-button-default uk-modal-close button-pay" type="button">Indietro</button>
                     </div>
 
                 </div>
-
-                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
             </div>
 
         </div>
 
-        <!-- contatti -->
-        <footer id="Contatti" class="uk-margin-top" uk-sticky>
-            <div class="uk-container uk-padding-small">
-                <p class="uk-text-small">copyright(c).</p>
-            </div>
-        </footer>
+        <div class="uk-container page-container">
 
-    </div>
+            <!-- contatti -->
+            <footer id="Contatti" class="uk-margin-top">
+                <div class="uk-child-width-expand@m uk-text-center uk-margin-medium-bottom uk-margin-medium-top uk-flex uk-flex-middle" uk-grid uk-height-match="target: > div > .uk-card">
+                    <div class="uk-flex-first">
+                        <div class="">
+                            <img class="uk-border-circle" src="src/img/foto_barbo.jpg" width="90" height="90" alt="Border circle">
+                            <p class="uk-margin-remove-bottom">Alessandro Barboglio </p>
+                            <a class="uk-margin-remove-vertical" href="tel:+393331110866">
+                            <span uk-icon="receiver"></span> 3331020783
+                            </a> <br>
+                            <a class="uk-margin-remove-vertical" href="mailto:alessandro.barboglio@outlook.it">
+                            <span class="uk-margin-small-right" uk-icon="mail"></span>alessandro.barboglio@outlook.it</a> <br>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="uk-flex-last@m">
+                        <div >
+                            <img class="uk-border-circle" src="src/img/giacomo.JPG" width="90" height="90" alt="Border circle">
+                            <p class="uk-margin-remove-bottom">Giacomo Dalprà </p>
+                            <a class="uk-margin-remove-vertical" href="tel:+393331110866">
+                            <span uk-icon="receiver"></span> 3331110866</a> <br>
+                            <a class="uk-margin-remove-vertical" href="mailto:giacomo.dalpra24@gmail.com">
+                            <span class="uk-margin-small-right" uk-icon="mail"></span>giacomo.dalpra24@gmail.com</a> <br>
+                        </div>
+                    </div> -->
+
+                    <div class="uk-flex-first@m">
+                        <div>
+                            <img  width="90" height="90" src="src/img/logo/HF_LOGO.svg" alt=""> <br>
+
+                            <div class="uk-margin-small-top">
+                                <a href="https://www.instagram.com/homefitness_20/" class="uk-icon-link uk-margin-small-right" uk-icon="instagram"></a>
+                                <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="youtube"></a>
+                                <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="facebook"></a> <br>
+                            </div>
+
+                            <p class="uk-text-small uk-margin-remove-vertical">Via Cavour 24 Paderno Dugnano 20037 </p>
+                            <p class="uk-text-small uk-margin-remove-vertical">Tel. 3331020783 – email: homefitness@outlook.it </p>
+                            <p class="uk-text-small uk-margin-remove-vertical">Partita Iva IT03069220964 </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-child-width-expand@m uk-text-center uk-margin-medium-bottom uk-margin-medium-top uk-flex uk-flex-middle">
+                  <div>
+                    <a href="https://www.iubenda.com/privacy-policy/62672518" class="uk-text-small uk-margin-remove-vertical" title="Privacy Policy ">Privacy Policy</a>
+                    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                    <text style="color:#FFC107">|</text>
+                    <a href="https://www.iubenda.com/privacy-policy/62672518/cookie-policy" class="uk-text-small uk-margin-remove-vertical" title="Cookie Policy ">Cookie Policy</a>
+                    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
+                    <p class="uk-text-small uk-margin-remove-vertical"> ©BicosTech2020 </p>
+                </div>
+
+                </div>
+            </footer>
+        </div>
 
 </body>
 

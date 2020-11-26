@@ -1,5 +1,30 @@
+@font-face{
+    font-family: regular-montserrat;
+    src: url("../src/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face{
+    font-family: title-cover-oswald;
+    src: url("../src/fonts/Oswald/static/Oswald-Regular.ttf");
+}
+
+html{
+    font-family: regular-montserrat; 
+}
+
 .page-container {
     max-width: 105rem;
+}
+
+.card-container {
+    background-color: white;
+    padding: 4rem;
+}
+
+@media (max-width:640px) {
+    .card-container {
+        padding: 1rem 0;
+    }
 }
 
 .all-container {
@@ -25,6 +50,25 @@
     }
 }
 
+/* Cover */
+
+#cover-title {
+    font-family: title-cover-oswald;
+    text-shadow: 4px 4px 10px #000000;
+    /*font-size: 10vh;*/
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Biografia */
+
+@media (max-width:965px) {
+    #mission>div {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
 .bio-divider {
     text-align: center;
     margin-top: 20px !important;
@@ -37,10 +81,18 @@
 
 .card-package {
     background-color: white !important;
-    height: 35rem !important;
-    width: 22rem !important;
+    /* height: 35rem !important; */
+    /* width: 22rem !important; */
     color: black !important;
     text-align: center;
+}
+
+.slider-container {
+    padding: 1rem;
+}
+
+.card-item {
+    padding: 1rem;
 }
 
 .icon-package {
@@ -54,4 +106,218 @@
 
 .grow:hover {
     transform: scale(1.1);
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.button-pay,
+.button-call-to-action {
+    width: 8rem;
+    height: 2.5rem;
+    position: relative;
+    margin-bottom: 25px;
+    border-radius: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.button-call-to-action {
+    width: fit-content;
+}
+
+.card-header {
+    padding: 1rem;
+    height: 10rem;
+}
+
+.card-body {
+    padding: 1rem;
+    height: 20rem;
+    overflow: auto;
+}
+
+.card-footer {
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 3.2rem;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.arrow-black {
+    color: black !important;
+}
+
+.arrow-black:hover {
+    color: black !important;
+}
+
+@media (max-width:640px) {
+    .arrow-left {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:640px) {
+    .arrow-right {
+        margin-right: 0;
+    }
+}
+
+
+/* Modal for products */
+
+#modal-shop-price {
+    color: #FFFFFF;
+}
+
+.modal-mail-color{
+    color: #FFC107;
+}
+
+.modal-mail-color:hover{
+    color: #FFC107;
+    text-decoration-style: none;
+}
+
+/* Navbar Mobile uk-aktive*/
+
+.uk-light .uk-nav-primary>li.uk-active>a,
+.uk-section-primary:not(.uk-preserve-color) .uk-nav-primary>li.uk-active>a,
+.uk-section-secondary:not(.uk-preserve-color) .uk-nav-primary>li.uk-active>a,
+.uk-tile-primary:not(.uk-preserve-color) .uk-nav-primary>li.uk-active>a,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-nav-primary>li.uk-active>a,
+.uk-card-primary.uk-card-body .uk-nav-primary>li.uk-active>a,
+.uk-card-primary> :not([class*=uk-card-media]) .uk-nav-primary>li.uk-active>a,
+.uk-card-secondary.uk-card-body .uk-nav-primary>li.uk-active>a,
+.uk-card-secondary> :not([class*=uk-card-media]) .uk-nav-primary>li.uk-active>a,
+.uk-overlay-primary .uk-nav-primary>li.uk-active>a,
+.uk-offcanvas-bar .uk-nav-primary>li.uk-active>a {
+    color: #ffc107;
+}
+
+.uk-light .uk-dotnav>*>*,
+.uk-section-primary:not(.uk-preserve-color) .uk-dotnav>*>*,
+.uk-section-secondary:not(.uk-preserve-color) .uk-dotnav>*>*,
+.uk-tile-primary:not(.uk-preserve-color) .uk-dotnav>*>*,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-dotnav>*>*,
+.uk-card-primary.uk-card-body .uk-dotnav>*>*,
+.uk-card-primary> :not([class*=uk-card-media]) .uk-dotnav>*>*,
+.uk-card-secondary.uk-card-body .uk-dotnav>*>*,
+.uk-card-secondary> :not([class*=uk-card-media]) .uk-dotnav>*>*,
+.uk-overlay-primary .uk-dotnav>*>*,
+.uk-offcanvas-bar .uk-dotnav>*>* {
+    background-color: transparent;
+    border-color: #ffc107;
+}
+
+.uk-light .uk-dotnav>.uk-active>*,
+.uk-section-primary:not(.uk-preserve-color) .uk-dotnav>.uk-active>*,
+.uk-section-secondary:not(.uk-preserve-color) .uk-dotnav>.uk-active>*,
+.uk-tile-primary:not(.uk-preserve-color) .uk-dotnav>.uk-active>*,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-dotnav>.uk-active>*,
+.uk-card-primary.uk-card-body .uk-dotnav>.uk-active>*,
+.uk-card-primary> :not([class*=uk-card-media]) .uk-dotnav>.uk-active>*,
+.uk-card-secondary.uk-card-body .uk-dotnav>.uk-active>*,
+.uk-card-secondary> :not([class*=uk-card-media]) .uk-dotnav>.uk-active>*,
+.uk-overlay-primary .uk-dotnav>.uk-active>*,
+.uk-offcanvas-bar .uk-dotnav>.uk-active>* {
+    background-color: #ffc107;
+    border-color: transparent;
+}
+
+.uk-light .uk-dotnav>*> :hover,
+.uk-section-primary:not(.uk-preserve-color) .uk-dotnav>*> :hover,
+.uk-section-secondary:not(.uk-preserve-color) .uk-dotnav>*> :hover,
+.uk-tile-primary:not(.uk-preserve-color) .uk-dotnav>*> :hover,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-dotnav>*> :hover,
+.uk-card-primary.uk-card-body .uk-dotnav>*> :hover,
+.uk-card-primary> :not([class*=uk-card-media]) .uk-dotnav>*> :hover,
+.uk-card-secondary.uk-card-body .uk-dotnav>*> :hover,
+.uk-card-secondary> :not([class*=uk-card-media]) .uk-dotnav>*> :hover,
+.uk-overlay-primary .uk-dotnav>*> :hover,
+.uk-offcanvas-bar .uk-dotnav>*> :hover,
+.uk-light .uk-dotnav>*> :focus,
+.uk-section-primary:not(.uk-preserve-color) .uk-dotnav>*> :focus,
+.uk-section-secondary:not(.uk-preserve-color) .uk-dotnav>*> :focus,
+.uk-tile-primary:not(.uk-preserve-color) .uk-dotnav>*> :focus,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-dotnav>*> :focus,
+.uk-card-primary.uk-card-body .uk-dotnav>*> :focus,
+.uk-card-primary> :not([class*=uk-card-media]) .uk-dotnav>*> :focus,
+.uk-card-secondary.uk-card-body .uk-dotnav>*> :focus,
+.uk-card-secondary> :not([class*=uk-card-media]) .uk-dotnav>*> :focus,
+.uk-overlay-primary .uk-dotnav>*> :focus,
+.uk-offcanvas-bar .uk-dotnav>*> :focus {
+    background-color: #ffc107;
+    border-color: transparent;
+}
+
+.uk-offcanvas-bar {
+    background-color: rgba(34,34,34,0.98);
+}
+
+.button-paypal {
+    padding: 0.3rem 0;
+}
+
+.img-paypal {
+    width: 70%;
+    height: auto;
+}
+
+
+/* Trasparenza dell'overlay sulla cover */
+
+.uk-overlay-primary {
+    background: rgba(34, 34, 34, 0.5);
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-item {
+    margin: 1rem 3rem;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffc107;
+}
+
+footer a {
+    color: #ffc107;
+}
+
+footer a:hover{
+    color: #FFC107;
+}
+
+
+::selection {
+  background: #FFC107;
 }
